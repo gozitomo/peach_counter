@@ -41,7 +41,7 @@ def yolov5s_pred(input):
 def peach2311_pred(input):
 
     #独自モデルを使用
-    model = torch.hub.load('ultralytics/yolov5', 'custom', 'peach2311.pt', source='local')
+    model = torch.hub.load('sub', 'custom', 'peach2311.pt', source='local')
     img = Image.open(imgpath)
     result = model(img)
     result.render()
