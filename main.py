@@ -120,6 +120,7 @@ def page4():
     if uploaded_img:
         data = Pred.csv_output("peach08.pt", uploaded_img)
         data.columns = ["x", "y", "x", "y", "confidence score", "y"]
+        st.write("There are " + str(len(data.index)) + " peaches")
         st.dataframe(data.iloc[:,4])
         st.image(peach08_array, caption="prediction", use_column_width=True)
     else:
@@ -130,6 +131,7 @@ def page5():
         st.write("prediction-peach06")
         data = Pred.csv_output("peach06.pt", uploaded_img)
         data.columns = ["x", "y", "x", "y", "confidence score", "y"]
+        st.write("There are " + str(len(data.index)) + " peaches")
         st.dataframe(data.iloc[:,4])
         st.image(peach06_array, caption="prediction", use_column_width=True)
     else:
@@ -140,6 +142,7 @@ def page6():
         st.write("prediction-peach04")
         data = Pred.csv_output("peach04.pt", uploaded_img)
         data.columns = ["x", "y", "x", "y", "confidence score", "y"]
+        st.write("There are " + str(len(data.index)) + " peaches")
         st.dataframe(data.iloc[:,4])
         st.image(peach04_array, caption="prediction", use_column_width=True)
     else:
